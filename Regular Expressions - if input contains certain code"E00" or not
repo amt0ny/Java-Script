@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script type="text/javascript">
+        function validation(){
+
+            var username = document.getElementById("uname").value;
+            var regx = /E00/i;
+            if(regx.test(username)){
+                alert("valid Employee number");
+                return true;
+            }
+            else{
+                alert("invalid information");
+                document.getElementById("lbl").style.visibility = "visible";
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+  <form onsubmit="return validation()">
+
+    <input  type="text" id="uname" placeholder="username"></input>
+    <label id="lbl" style="color: red; visibility: hidden;">Invalid</label>
+    <br><br>
+  
+
+    <button onclick="validation()" type="submit">Submit</button>
+
+  </form>
+
+</body>
+</html>
