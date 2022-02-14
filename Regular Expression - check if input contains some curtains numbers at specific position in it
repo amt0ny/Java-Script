@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script type="text/javascript">
+        function validation(){
+
+            var username = document.getElementById("uname").value;
+            //var regx = /[123]a[a-x]c[1-9]/i; // "1,a,h,c,6" is valid number to pass the condition
+
+             var regx = /[^1abc]abc/ //-- so these 1,a,b,c are the words we cant have in starting of our input
+
+             // to ignore case sensitivness without using "i" flag we can use ->[a-x A-X]
+            if(regx.test(username)){
+                alert("valid Employee number");
+                document.getElementById("lbl").style.visibility = "hidden";
+               
+            }
+            else{
+                alert("invalid information");
+                document.getElementById("lbl").style.visibility = "visible";
+               
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+  <form>
+
+    <input  type="text" id="uname" placeholder="username"></input>
+    <label id="lbl" style="color: red; visibility: hidden;">Invalid</label>
+    <br>
+    <br>
+    <button onclick="validation()" type="button">Submit</button>
+
+  </form>
+
+</body>
+</html>
