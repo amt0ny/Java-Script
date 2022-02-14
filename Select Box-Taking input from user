@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script type="text/javascript">
+        function Click(){
+            var select = document.getElementById("selectbox");
+            if(select.options[select.selectedIndex].value){
+                alert(select.value);
+            }
+            else{
+                alert("Nothing is selected");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <select  id="selectbox">
+        <option value="name1">name1</option>
+        <option value="name2">name2</option>
+        <option value="name3">name3</option>
+        <option value="name4">name4</option>
+    </select>
+    <button onclick="Click()">Click</button>
+</body>
+</html>
