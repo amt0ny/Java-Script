@@ -8,28 +8,19 @@
             para[0].style.color = "red";
             para[1].style.fontStyle = "italic";
             para[2].style.background = "orange";
-            para[3].style.fontSize = 25;
-            /* 
-            font size is not working donno why
-            */
-        //    for(var i = 0;i<para.length;i++){
-        //        para[i].style.color = "yellow"
-        //    }    *** we can change styling using for loop
-
+            para[3].style.fontSize  = "20px";
         }
     </script>
 </head>
 
 <body>
-
     <p>This is para 1</p>
     <p>This is para 2</p>
     <p>This is para 3</p>
     <p>This is para 4</p>
     <p>This is para 5</p>
-    
-    <br>
 
+    <br>
     <button onclick="Click()">Click Me</button>
 </body>
 </html>
