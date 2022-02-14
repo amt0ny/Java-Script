@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script type="text/javascript">
+        function Click(){
+            var rd1 = document.getElementById("rd1");
+            var rd2 = document.getElementById("rd2");
+            if(rd1.checked == true){
+                alert(rd1.value);
+            }
+            else if(rd2.checked == true){
+                alert(rd2.value);
+            }
+            else{
+                alert("no channel is selected");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input type="radio" id="rd1" name="grp1" value="my name">My name</input>
+    <br>
+    <input type="radio" id="rd2" name="grp1" value="my age">My age</input>
+    <br>
+    <button id="btn" onclick="Click()">Click</button>
+</body>
+</html>
