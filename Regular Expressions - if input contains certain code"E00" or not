@@ -22,14 +22,14 @@
 
 <body>
 
-  <form onsubmit="return validation()">
+  <form>
 
     <input  type="text" id="uname" placeholder="username"></input>
     <label id="lbl" style="color: red; visibility: hidden;">Invalid</label>
     <br><br>
   
 
-    <button onclick="validation()" type="submit">Submit</button>
+    <button onclick="validation()" type="button">Submit</button>
 
   </form>
 
