@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    
+</head>
+
+<body>
+  <form>
+    <input  type="text" id="a" placeholder="st1"></input>
+    <br>
+    <br>
+    <input type="text" id="b" placeholder="st2"></input>
+    <br>
+    <br>
+    <button onclick="Sum()" type="button">Submit</button>
+    <h4 id="printsum">Result</h4>
+  </form>
+</body>
+<script type="text/javascript">
+    function Sum(){
+        var a = Number(document.getElementById("a").value);
+        var b = Number(document.getElementById("b").value);
+        var c = a+b;
+        document.getElementById("printsum").innerHTML = "Result = "+ c;
+
+    }
+</script>
+</html>
