@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    
+</head>
+
+<body>
+    <button onclick="Start_timer()" type="button">Start</button>
+    <br>
+    <br>
+    <h3 id="time" >Start Time</h3>
+    <br>
+    <br>
+    <button onclick="Stop_timer()" type="button">Stop</button>
+</body>
+// SCRIPT 1
+<script type="text/javascript">
+    var ID = 0;
+    var seconds = 0;
+    function Start(){
+        document.getElementById("time").innerHTML = seconds+" seconds";
+        seconds++;
+    }
+    function Start_timer(){
+        ID = window.setInterval(Start,1000);
+    }
+    function Stop_timer(){
+        window.clearInterval(ID);
+    }
+</script>
+</html>
+
+
+// SCRIPT 2
+
+/*<script type="text/javascript">
+    var ID = 0;
+    function Start(){
+        document.getElementById("time").innerHTML = "5 seconds completed";
+    }
+    function Start_timer(){
+        ID = window.setTimeout(Start,5000);
+    }
+    function Stop_timer(){
+        window.clearTimeout(ID);
+    }
+</script>
+*/
