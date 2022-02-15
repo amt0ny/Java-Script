@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script type="text/javascript">
+        function validation(){
+            var inp = document.getElementById("mobile").value;
+            var regx = /^[6-9]\d{9}$/;
+            // ^ this sign is for the starting number which should in between of [6-9]
+            // \d is used at the place of [0-9]
+            // $ this sign for the last number which should be in between of [0-9] 
+            // \w is used at the place of [a-z A-Z & _ ]
+            // \s is used at the place of (space & tabs)
+            // \t is used for tab only
+            if(regx.test(inp)){
+                document.getElementById("lbl").innerHTML = "Valid";
+                document.getElementById("lbl").style.visibility = "visible";
+                document.getElementById("lbl").style.color = "green";
+            }
+            else{
+                document.getElementById("lbl").innerHTML = "Invalid";
+                document.getElementById("lbl").style.visibility = "visible";
+                document.getElementById("lbl").style.color = "red";
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+  <form>
+
+    <input  type="text" id="mobile" placeholder="username"></input>
+    <label id="lbl" style="color: red; visibility: hidden;">Invalid</label>
+    <br>
+    <br>
+    <button onclick="validation()" type="button">Submit</button>
+
+  </form>
+
+</body>
+</html>
