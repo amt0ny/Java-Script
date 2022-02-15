@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    
+</head>
+
+<body>
+    <button onclick="fade_In()">Fade In</button>
+    <br><br>
+    <img id="img1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdfPXIKlbWNTE9G6z4y5xM9tLaX1fQmQh3zg&usqp=CAU" >
+    <br><br>
+    <button onclick="fade_out()">Fade out</button>
+</body>
+<script type="text/javascript">
+    var opacity_value = 0;
+    var intervalID = 0;
+     function fade_out(){
+         intervalID =  setInterval(hide,50);
+     }
+     function fade_In(){
+         intervalID = setInterval(show,50);
+    }
+
+     function hide(){
+         var img = document.getElementById("img1");
+         opacity_value = Number(window.getComputedStyle(img).getPropertyValue("opacity"));
+         if(opacity_value > 0){
+             
+             opacity_value = opacity_value-0.1;
+             img.style.opacity = opacity_value;
+         }
+         else{
+             clearInterval(intervalID);
+         }
+         }
+        function show(){
+              var img = document.getElementById("img1");
+              opacity_value = Number(window.getComputedStyle(img).getPropertyValue("opacity"));
+              if(opacity_value < 1){
+
+                  opacity_value = opacity_value + 0.1;
+                  img.style.opacity = opacity_value;
+                
+              }
+              else{
+                  clearInterval(intervalID);
+              }
+          }
+     
+</script>
+</html>
+
