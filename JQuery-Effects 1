@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id = "myid" class = "myclass">
+        <p>my para 1 from div1</p>
+        <p>my para 2 from div2</p>
+    </div>
+    <div class = "myclass">
+        <p>my para 1 from div2</p>
+    </div>
+
+
+    <button id="btn1" >Click me</button>
+    <button id="btn2" >Click me 2</button>
+    <button id="btn3" >Toggle</button>
+
+
+    
+
+</body>
+<script src="jquery.js" type="text/javascript"></script>
+
+<script> 
+// SCRIPT 1
+    $(document).ready(function(){
+        $("#btn1").click(function(){
+            $("#myid").slideUp(2000);
+        })
+        $("#btn2").click(function(){
+            $("#myid").slideDown(2000);
+        })
+        $("#btn3").click(function(){
+            $("#myid").slideToggle(2000);
+        })
+    })
+</script>
+</html>
+
+<!--   SCRIPT 2
+     $(document).ready(function(){
+        $("#btn1").click(function (){
+            $("#myid").hide(2000);
+        })
+        $("#btn2").click(function(){
+            $("#myid").show(2000);
+        })
+        $("#btn3").click(function(){
+            $("#myid").toggle(500);
+        })
+    }) -->
