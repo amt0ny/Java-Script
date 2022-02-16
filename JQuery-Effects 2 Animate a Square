@@ -36,3 +36,18 @@
     })
 </script>
 </html>
+
+// CSS :::::::::::::::::::::::::::::::::::::::
+
+.myclass{
+    border: 2px solid blue;
+    margin: 20px;
+    padding: 10px;
+}
+#myid {
+    background-color: aquamarine;
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    padding: 20px;
+}
