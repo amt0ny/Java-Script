@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h4 id="heading">Setting jquery</h4>
+    <h4 class = "myclass" >Setting jquery</h4>
+    <h4 class = "myclass" >Setting jquery</h4>
+    <h4 class = "myclass" >Setting jquery</h4>
+
+    <div class = "myclass">
+        <p>my para 1 from div1</p>
+        <p>my para 2 from div2</p>
+    </div>
+    <div class = "myclass">
+        <p>my para 1 from div2</p>
+    </div>
+    <div class = "myclass">
+        <ul>
+            <li> line 1</li>
+            <li> line 2</li>
+            <li> line 3</li>
+            <li> line 4</li>
+        </ul>
+    </div>
+    <div class = "myclass">
+        <ul>
+            <li>line 1</li>
+            <li>line 2</li>
+            <li>line 3</li>
+            <li>line 4</li>
+        </ul>
+    </div>
+    <button id="btn1" >Click me</button>
+    <button id="btn2" >Click me 2</button>
+    <button id="btn3" >Click me 3</button>
+    <button id="btn4" >Click me 4</button>
+
+
+    
+
+</body>
+<script src="jquery.js" type="text/javascript"></script>
+
+<script>
+    $(document).ready(function(){
+        $("#btn1").click(mouseover);
+        $("#btn2").click(mouseout);
+        $("#btn3").click(both_operation);
+        $("#btn4").hover(mouseover,mouseout);
+        // we can use doubleclick here also at place of click so that out function will call only after clicking 2 times on a specific button. 
+        
+        function both_operation(){
+            $("div > ul").fadeToggle(2000);
+        }
+        function mouseover(){
+        $("div > ul").fadeOut(1000);
+        }
+        function mouseout(){
+            $("div > ul").fadeIn(1000);
+        }
+    })
+    
+</script>
+</html>
+
