@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="myclass">
+        <p id="p1" value = "name">My para 1 from <b>division 2</b> </p>
+    </div>
+    <br><br>
+    <button id="btn1" >Click me</button>
+
+</body>
+
+<script src="jquery.js" type="text/javascript"></script>
+<script> 
+// SCRIPT 1
+    $(document).ready(function(){
+        $("#btn1").click(function(){
+            alert($("#p1").css("position"));// css used for value of css properties
+            // alert($("#p1").attr("id")); used to check the name of paarticular attribute
+            // alert($("#p1").text()); used to check text inside tags
+            // alert($("#p1").html()); used to print text and html text inside tags 
+        })
+        })
+    
+</script>
+</html>
+
+//CSS :::::::::::::::::::::::::::::::::::
+
+.myclass{
+    border: 2px solid blue;
+    margin: 20px;
+    padding: 10px;
+    background-color: rgb(170, 170, 180);
+}
