@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <h4 id="heading">Setting jquery</h4>
+    <h4 class = "myclass" >Setting jquery</h4>
+    <h4 class = "myclass" >Setting jquery</h4>
+    <h4 class = "myclass" >Setting jquery</h4>
+
+    <div class = "myclass">
+        <p>my para</p>
+    </div>
+    <button id="btn1" onclick="fn1()">Click me</button>
+    
+
+</body>
+<script src="jquery.js" type="text/javascript"></script>
+
+<script>
+    function fn1(){
+        $("h4").fadeToggle(2000);
+        // we can use . for any class & and # for id and for tags we will use tag name
+    }
+</script>
+</html>
