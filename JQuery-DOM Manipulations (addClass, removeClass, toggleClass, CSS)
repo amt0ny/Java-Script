@@ -30,6 +30,7 @@
       $(document).ready(function(){
           $("#btn1").click(function(){
               $("#mydiv").addClass("newdiv newpara");// passing multiple class
+              // these class is in CSS we fetching them from there
               // $("#mydiv").addClass("newpara");
           })
           $("#btn2").click(function(){
@@ -52,3 +53,20 @@
       })
 </script>
 </html>
+
+// CSS :::::::::::::::::::::::::::::::::::::::::
+
+#mydiv{
+    border: 2px solid blue;
+    margin: 20px;
+    padding: 10px;
+    background-color: rgb(170, 170, 180);
+}
+.newdiv{
+    font-size: 20px;
+    color: chartreuse;
+}
+.newpara{
+    border-radius: 10px;
+    font-weight: bold;
+}
