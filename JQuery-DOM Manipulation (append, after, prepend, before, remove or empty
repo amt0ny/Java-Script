@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body >
+    <div id="mydiv">
+
+        <p id="p1">this is para 1st from div 1</p>
+        <p id="p2">this is para 2nd from div 1</p>
+
+    </div>
+
+    <div>
+
+        <button id="btn1">Append</button>
+        <button id="btn2">After</button>
+        <button id="btn3">Prepend</button>
+        <button id="btn4">Before</button>
+        <br><br>
+        <button id="btn5">Remove</button>
+        <button id="btn6">Empty</button>
+
+    </div>
+    
+</body>
+
+<script src="jquery.js" type="text/javascript"></script>
+<script> 
+
+      $(document).ready(function(){
+
+          // Append 
+          $("#btn1").click(function(){
+              $("#mydiv").append("<p>it comes after clicking on Append</p>");
+          })
+          // After  
+          $("#btn2").click(function(){
+              $("#mydiv").after("<p>it comes after clicking on After</p>");
+          })
+          // Prepend
+          $("#btn3").click(function(){
+              $("#mydiv").prepend("<p>it comes after clicking on Prepend</p>");
+          })
+          // Before
+          $("#btn4").click(function(){
+              $("#mydiv").before("<p>it comes after clicking on Before</p>");
+          })
+          // Remove
+          $("#btn5").click(function(){
+            $("#mydiv").remove(); // weve to pass id or class of tag
+            //$("p").remove("#p1");
+            //$("p").remove("#p1,#p2")
+          })
+          $("#btn6").click(function(){
+              $("#mydiv").empty();// it will remove whole taxt from that particular tag mentioned*
+          })
+
+      })
+
+</script>
+</html>
+
+// CSS :::::::::::::::::::::::::::::::::
+
+#mydiv{
+    border: 2px solid blue;
+    margin: 20px;
+    padding: 10px;
+    background-color: rgb(170, 170, 180);
+}
