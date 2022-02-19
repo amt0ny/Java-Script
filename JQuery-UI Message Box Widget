@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="jqueryui/jquery-ui.css">
+    <link rel="stylesheet" href="jqueryui/jquery-ui.structure.css">
+    <link rel="stylesheet" href="jqueryui/jquery-ui.theme.css">
+
+</head>
+
+<body >
+    <div class="myclass">
+        <h3>This is my first Div</h3>
+        <button id="btn1">Click me to create a boc message</button>
+    
+    </div>
+    <div id="mydiv" title="Messageox"  class="myclass">
+        <h3>Accordion 0</h3>
+        <img src="https://i.pinimg.com/474x/65/e3/bc/65e3bce1325316c5309d4f9ea55ee947.jpg"  width="370px"">
+
+    </div>
+</body>
+<script src="jquery.js" type="text/javascript"></script>
+<script src="jqueryui/jquery-ui.js" type="text/javascript"></script>
+
+<script>
+    $("#btn1").click(function(){
+        $("#mydiv").dialog({
+            
+            title:"Custom msg box",
+            draggable:true,// false
+            resizable:true,// false
+            width:400,
+            height:400,
+            modal:true,
+            // now dialog method give us a inbuilt buttons by which we can close our message box, there two buttons we made "1st" - "close" "2nd" - "Ok" both are used to close the message box
+            buttons:[
+                {
+                    text:"close",
+                    icon:"ui-icon-heart",
+                    click: function(){
+                        $(this).dialog("close")
+                    }
+                },
+                {
+                    text:"Ok",
+                    icon:"ui-icon-heart",
+                    click: function(){
+                        $(this).dialog("close")
+                    }
+                }
+            ]
+        });
+        
+
+    })
+
+</script>
+</html>
