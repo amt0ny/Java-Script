@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="jqueryui/jquery-ui.css">
+    <link rel="stylesheet" href="jqueryui/jquery-ui.structure.css">
+    <link rel="stylesheet" href="jqueryui/jquery-ui.theme.css">
+
+</head>
+
+<body >
+    <div id="mydiv">
+        <h3>Tool tip query in jquery-ui</h3>
+        <img id="myimg" src="https://i.pinimg.com/474x/f0/d4/2e/f0d42ee5634246ce902a3e885decd33d.jpg" title="Ford" width="200px " >
+    </div>
+</body>
+<script src="jquery.js" type="text/javascript"></script>
+<script src="jqueryui/jquery-ui.js" type="text/javascript"></script>
+
+<script>
+    $("#myimg").tooltip({
+        // content: "Ford Mustang",
+        track:true,
+        show:{effect:"bounce",duration:2000},
+        hide:{effect:"fade",duration:2000}
+    })
+    
+</script>
+</html>
+
+// CSS :::::::::::::::::::::::::::::::::
+
+#mydiv{
+    border: 2px solid black;
+    padding: 25px;
+    border-radius: 7px;
+}
