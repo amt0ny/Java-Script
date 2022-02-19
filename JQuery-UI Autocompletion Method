@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="jqueryui/jquery-ui.css">
+    <link rel="stylesheet" href="jqueryui/jquery-ui.structure.css">
+    <link rel="stylesheet" href="jqueryui/jquery-ui.theme.css">
+
+</head>
+
+<body >
+    <div id="mydiv">
+        <label for="">Enter your city</label>
+        <input type="text" id="myinput">
+    </div>
+</body>
+<script src="jquery.js" type="text/javascript"></script>
+<script src="jqueryui/jquery-ui.js" type="text/javascript"></script>
+
+<script>
+    $("#myinput").autocomplete({
+        source:["Mumbai","Bangalor","Gururgram","Gudgaon","New Delhi","Noida","Chennai","Haidrabad",],// we can store these whole cities in an array and acces from there
+        
+        autoFocus:true,
+        delay:100,
+        minLength:2,
+    
+    });
+</script>
+</html>
+
+// CSS ::::::::::::::::::::::::::::::::::::::
+
+#mydiv{
+    border: 2px solid black;
+    padding: 25px;
+    border-radius: 7px;
+}
