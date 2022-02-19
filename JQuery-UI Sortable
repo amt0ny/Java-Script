@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="jqueryui/jquery-ui.css">
+    <link rel="stylesheet" href="jqueryui/jquery-ui.structure.css">
+    <link rel="stylesheet" href="jqueryui/jquery-ui.theme.css">
+
+</head>
+
+<body >
+    <div id="mydiv">
+        <div class="cube">
+            <h4>CUBE1</h4>
+        </div>
+        <div class="cube">
+            <H4>CUBE2</H4>
+        </div>
+        <div class="cube">
+            <H4>CUBE3</H4>
+        </div>
+    </div>
+</body>
+<script src="jquery.js" type="text/javascript"></script>
+<script src="jqueryui/jquery-ui.js" type="text/javascript"></script>
+
+<script>
+    $("#mydiv").sortable({
+       // axis:"x",//"y"
+        // containment:"parent",// document
+        cursor:"grab",
+        diatance:"10px",
+        opacity:0.6,
+    });
+</script>
+</html>
+
+// CSS :::::::::::::::::::::::::::::::::::::::::::::; 
+
+#mydiv{
+    width: 500px;
+    border: 2px solid black;
+    /* padding: px; */
+    border-radius: 7px;
+    display: inline-block;
+}
+.cube{
+    background-color: rgb(51, 247, 100);
+    border: 1px solid black;
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    
+}
