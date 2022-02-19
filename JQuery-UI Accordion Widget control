@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="jqueryui/jquery-ui.css">
+    <link rel="stylesheet" href="jqueryui/jquery-ui.structure.css">
+    <link rel="stylesheet" href="jqueryui/jquery-ui.theme.css">
+
+</head>
+
+<body >
+    <div id="mydiv">
+        <h3>Accordion 0</h3>
+        <p>this para is is gonna treated as a paragraph and upper line is gonna treated as a titlethis para is is gonna treated as a paragraph and upper line is gonna treated as a titlethis para is is gonna treated as a paragraph and upper line is gonna treated as a title</p>
+
+        <h3>Accordion 1</h3>
+        <p>this para is is gonna treated as a paragraph </p>
+
+        <h3>Accordion 2</h3>
+        <p>this para is is gonna treated as a paragraph and upper line is gonna treated as a title</p>
+
+        <h3>Accordion 3</h3>
+        <p>this para is is gonna treated as a paragraph and upper line is gonna treated as a title</p>
+
+    </div>
+</body>
+<script src="jquery.js" type="text/javascript"></script>
+<script src="jqueryui/jquery-ui.js" type="text/javascript"></script>
+
+<script>
+    $("#mydiv").accordion({
+        // active:1,
+        collapsible:true,
+        event:"click",
+        animate:500,
+        hightStyle:true,
+        
+    });
+    
+</script>
+</html>
