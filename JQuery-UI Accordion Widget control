@@ -35,7 +35,7 @@
         collapsible:true,
         event:"click",
         animate:500,
-        hightStyle:true,
+        heightStyle:true,
         
     });
     
